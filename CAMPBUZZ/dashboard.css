@@ -1,0 +1,87 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Navbar */
+.navbar {
+    background: #800000; /* Burgundy */
+    color: #fff;
+    padding: 15px 0;
+}
+
+.navbar .logo h1 {
+    font-size: 1.5rem;
+    display: inline;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    float: right;
+    margin: 0;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.nav-links a:hover {
+    background: #e6b853;
+}
+
+.logout {
+    background: #ff4d4d;
+    color: #fff;
+}
+
+.logout:hover {
+    background: #cc0000;
+}
+
+/* Welcome Banner */
+.welcome-banner {
+    background: #800000;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.welcome-banner h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.welcome-banner p {
+    font-size: 1.25rem;
+}
+
+/* Events Section */
+.events {
+    background: #fff;
+    padding: 50px 20px;
+}
+
+.events h2 {
+    text-align: center;
+    font-size: 2rem
