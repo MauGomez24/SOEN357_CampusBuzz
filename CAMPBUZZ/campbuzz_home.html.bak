@@ -20,6 +20,14 @@
             </ul>
         </div>
     </nav>
+	
+	<!-- Welcome Banner -->
+    <header class="welcome-banner">
+        <div class="container">
+            <h2>Welcome Back, [Student Name]!</h2>
+            <p>Stay updated with the latest campus events and activities tailored to your interests.</p>
+        </div>
+    </header>
 
     <!-- Main Content -->
     <div class="dashboard">
@@ -46,9 +54,36 @@
             </section>
         </aside>
 
+        <!-- Main Content -->
+    <div class="dashboard">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <section id="associations" class="associations">
+                <h3>Your Associations</h3>
+                <ul>
+                    <li>Engineering and Computer Science Society (ECA)</li>
+                    <li>Concordia AI Club</li>
+                    <li>Film Society</li>
+                </ul>
+                <button class="cta-button">Discover More Associations</button>
+            </section>
+
+            <section id="recommended-associations" class="associations">
+                <h3>Recommended Associations</h3>
+                <ul>
+                    <li>Business Society</li>
+                    <li>Debate Club</li>
+                    <li>Environmental Activists Group</li>
+                </ul>
+                <button class="cta-button">Explore Recommendations</button>
+            </section>
+        </aside>
+
         <!-- Main Feed -->
         <main class="feed">
+            <!-- Upcoming Events Section -->
             <section id="events" class="events-feed">
+                <h2>Upcoming Events</h2>
                 <article class="event-post">
                     <div class="event-header">
                         <h4>Hackathon 2024</h4>
@@ -78,18 +113,40 @@
                         <button class="cta-button">RSVP Now</button>
                     </div>
                 </article>
+            </section>
+
+            <!-- Divider -->
+            <hr class="divider">
+
+            <!-- Discover Events Section -->
+            <section id="discover-events" class="events-feed">
+                <h2>Discover Events</h2>
+                <article class="event-post">
+                    <div class="event-header">
+                        <h4>Photography Workshop</h4>
+                        <p>@FilmSociety | Dec 7, 2024</p>
+                    </div>
+                    <div class="event-image">
+                        <img src="photography.jpg" alt="Photography Workshop Event">
+                    </div>
+                    <div class="event-details">
+                        <p><strong>Location:</strong> Fine Arts Building</p>
+                        <p>Learn professional photography techniques from experts.</p>
+                        <button class="cta-button">RSVP Now</button>
+                    </div>
+                </article>
 
                 <article class="event-post">
                     <div class="event-header">
-                        <h4>AI Workshop</h4>
-                        <p>@AIClub | Dec 5, 2024</p>
+                        <h4>Green Campus Cleanup</h4>
+                        <p>@EnviroGroup | Dec 10, 2024</p>
                     </div>
                     <div class="event-image">
-                        <img src="ai-workshop.jpg" alt="AI Workshop Event">
+                        <img src="cleanup.jpg" alt="Green Campus Cleanup Event">
                     </div>
                     <div class="event-details">
-                        <p><strong>Location:</strong> Library Building</p>
-                        <p>Learn the fundamentals of AI from experts!</p>
+                        <p><strong>Location:</strong> Outdoor Area</p>
+                        <p>Join us to make our campus greener and cleaner!</p>
                         <button class="cta-button">RSVP Now</button>
                     </div>
                 </article>
