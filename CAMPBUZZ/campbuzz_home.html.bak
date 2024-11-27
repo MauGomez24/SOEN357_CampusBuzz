@@ -20,14 +20,6 @@
             </ul>
         </div>
     </nav>
-	
-	<!-- Welcome Banner -->
-    <header class="welcome-banner">
-        <div class="container">
-            <h2>Welcome Back, [Student Name]!</h2>
-            <p>Stay updated with the latest campus events and activities tailored to your interests.</p>
-        </div>
-    </header>
 
     <!-- Main Content -->
     <div class="dashboard">
