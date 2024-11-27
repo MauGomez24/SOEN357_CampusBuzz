@@ -12,7 +12,7 @@
             <div class="hero-content">
                 <h1>CampusBuzz</h1>
                 <p>Your gateway to all campus events and activities.</p>
-                <a href="campbuzz_home.html" class="cta-button">Join CampusBuzz</a>
+                <a id="joinCampusBuzz" class="cta-button">Join CampusBuzz</a>
             </div>
             <div class="hero-image">
                 <img src="mockup.png" alt="CampusBuzz App Preview">
@@ -21,6 +21,17 @@
     </header>
 
     <main>
+        
+        <!-- Pop-up window for login purposes -->
+        <div class="overlay" id="modalOverlay"></div>
+        <div class="modal" id="loginModal">
+            <h3>Please select your login option</h3>
+            <a href="campbuzz_home.html" class="option-button">Student</a>
+            <a href="teacher_login.html" class="option-button">Association</a>
+            <a class="close-button" id="closeModal">Close</a>
+        </div>
+
+
         <!-- About Section -->
         <section id="about" class="about">
             <div class="container">
@@ -104,5 +115,6 @@
             <p>&copy; 2024 CampusBuzz. Built for Concordia University students.</p>
         </div>
     </footer>
+    <script src="landing.js"></script>
 </body>
 </html>
