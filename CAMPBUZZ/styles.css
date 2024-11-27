@@ -57,6 +57,8 @@ body {
 
 /*Modal box styling*/
 .modal {
+    margin: auto;
+    align-items: center;
     display: none; /* Hidden by default */
     position: fixed;
     top: 50%;
@@ -81,21 +83,27 @@ body {
   }
   
   .option-button {
-    margin: 10px 0;
+    margin: auto;
     display: block;
-    padding: 10px;
-    background-color: #28a745;
-    color: white;
-    text-align: center;
+    background: #ffcc66;
+    color: #800000;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
     border-radius: 5px;
     text-decoration: none;
+    font-weight: bold;
     cursor: pointer;
+    transition: background 0.3s;
+    text-align: center; /* Ensures text is centered horizontally */
+    width: 150px; /* Sets a smaller width for the button */
+    margin-bottom: 15px; /* Adds space between the buttons */
   }
   
   .close-button {
     display: inline-block;
     margin-top: 10px;
-    background-color: #dc3545;
+    background-color: #800000;
     color: white;
     padding: 5px 10px;
     border-radius: 5px;
