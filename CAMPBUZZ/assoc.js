@@ -44,3 +44,22 @@ const rsvpChart = new Chart(rsvpCnt, {
         }
     }
 });
+
+
+// Handle "Create Post" modal display
+document.getElementById('createPostButton').addEventListener('click', function () {
+    document.getElementById('modalOverlay').style.display = 'block';
+    document.getElementById('createPostModal').style.display = 'block';
+});
+
+// Handle modal close
+document.getElementById('closeCreatePostModal').addEventListener('click', function () {
+    document.getElementById('modalOverlay').style.display = 'none';
+    document.getElementById('createPostModal').style.display = 'none';
+});
+
+// Close modal when clicking on overlay
+document.getElementById('modalOverlay').addEventListener('click', function () {
+    document.getElementById('modalOverlay').style.display = 'none';
+    document.getElementById('createPostModal').style.display = 'none';
+});

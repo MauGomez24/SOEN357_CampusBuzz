@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Association Page</title>
     <link rel="stylesheet" href="dashboard.css">
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Script to be used for displaying the analytics charts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Script for displaying the analytics charts -->
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -21,7 +21,7 @@
         </div>
     </nav>
 
-    	<!-- Welcome Banner -->
+    <!-- Welcome Banner -->
     <header class="welcome-banner">
         <div class="container">
             <h2>[Association]'s Creator Hub</h2>
@@ -30,29 +30,10 @@
     </header>
 
     <main>
-        <!-- Create Post Section -->
-        <section id="create-post" class="create-post">
-            <div class="container">
-                <h2>Create New Event Post</h2>
-                <form class="post-form">
-                    <label for="event-title">Event Title:</label>
-                    <input type="text" id="event-title" name="event-title" placeholder="Enter event title" required>
 
-                    <label for="event-date">Event Date:</label>
-                    <input type="date" id="event-date" name="event-date" required>
-
-                    <label for="event-time">Event Time:</label>
-                    <input type="time" id="event-time" name="event-time" required>
-
-                    <label for="event-location">Event Location:</label>
-                    <input type="text" id="event-location" name="event-location" placeholder="Enter event location" required>
-
-                    <label for="event-description">Event Description:</label>
-                    <textarea id="event-description" name="event-description" placeholder="Write a brief description of the event..." rows="5" required></textarea>
-
-                    <button type="submit" class="cta-button">Post Event</button>
-                </form>
-            </div>
+        <!--Create Post Button-->
+        <section id="create-post-button" class="container">
+            <button id="createPostButton" class="cta-button">Create New Post</button>
         </section>
 
         <!-- Analytics Section -->
@@ -75,6 +56,34 @@
             </div>
         </section>
 
+        <!-- Create Post Modal -->
+        <div class="overlay" id="modalOverlay"></div>
+        <div class="modal" id="createPostModal">
+            <section id="create-post" class="create-post">
+                <div class="container">
+                    <h2>Create New Event Post</h2>
+                    <form class="post-form">
+                        <label for="event-title">Event Title:</label>
+                        <input type="text" id="event-title" name="event-title" placeholder="Enter event title" required>
+
+                        <label for="event-date">Event Date:</label>
+                        <input type="date" id="event-date" name="event-date" required>
+
+                        <label for="event-time">Event Time:</label>
+                        <input type="time" id="event-time" name="event-time" required>
+
+                        <label for="event-location">Event Location:</label>
+                        <input type="text" id="event-location" name="event-location" placeholder="Enter event location" required>
+
+                        <label for="event-description">Event Description:</label>
+                        <textarea id="event-description" name="event-description" placeholder="Write a brief description of the event..." rows="5" required></textarea>
+
+                        <button type="submit" class="cta-button">Post Event</button>
+                    </form>
+                    <button id="closeCreatePostModal" class="close-button">Close</button>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
