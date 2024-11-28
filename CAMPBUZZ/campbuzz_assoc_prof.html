@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Association Page</title>
     <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Script to be used for displaying the analytics charts -->
 </head>
 <body>
     <!-- Navigation Bar -->
@@ -59,17 +60,16 @@
             <div class="container">
                 <h2>Engagement Analytics</h2>
                 <div class="analytics-grid">
-                    <div class="analytics-card">
-                        <h3>Total RSVPs</h3>
-                        <p><span id="total-rsvps">154</span></p>
+                    <!-- Bar Chart -->
+                    <div class="chart-container">
+                        <h3>Event Views Over Time</h3>
+                        <canvas id="viewsChart"></canvas>
                     </div>
-                    <div class="analytics-card">
-                        <h3>Event Views</h3>
-                        <p><span id="total-views">673</span></p>
-                    </div>
-                    <div class="analytics-card">
-                        <h3>Active Participants</h3>
-                        <p><span id="active-participants">89</span></p>
+
+                    <!-- Pie Chart -->
+                    <div class="chart-container">
+                        <h3>RSVP Distribution</h3>
+                        <canvas id="rsvpChart"></canvas>
                     </div>
                 </div>
             </div>
@@ -82,5 +82,6 @@
             <p>&copy; 2024 CampusBuzz. Built for Concordia University students.</p>
         </div>
     </footer>
+    <script src="assoc.js"></script>
 </body>
 </html>
