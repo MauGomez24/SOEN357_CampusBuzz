@@ -182,3 +182,96 @@ body {
 .event-details .cta-button {
     margin-top: 10px;
 }
+
+/*Logo*/
+.logo{
+    text-decoration: none;
+    color: inherit;
+}
+
+/* Create Post Section */
+.create-post {
+    background: #fff;
+    padding: 50px 20px;
+}
+
+.create-post h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #800000;
+    text-align: center;
+}
+
+.post-form label {
+    display: block;
+    font-size: 1rem;
+    margin: 10px 0 5px;
+    color: #333;
+}
+
+.post-form input, .post-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.post-form button {
+    display: inline-block;
+    background: #800000;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.post-form button:hover {
+    background: #660000;
+}
+
+/* Analytics Section */
+.analytics {
+    background: #f9f9f9;
+    padding: 50px 20px;
+}
+
+.analytics h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 2rem;
+    color: #800000;
+}
+
+.analytics-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.analytics-card {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.analytics-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #800000;
+}
+
+.analytics-card p {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+}
