@@ -4,7 +4,7 @@
   <img src="CAMPBUZZ/resources/logo.png" alt="logo" width="500" height="500" />
 </p>
 
-_Your gateway to all campus events and activities_ 
+_CampusBuzz, your gateway to all campus events and activities_ 
 
 ## Team Members:
 + Matei Razvan Garila
@@ -12,31 +12,31 @@ _Your gateway to all campus events and activities_
 + Seif Bedair
 + Mauricio Gomez Iglesias
 
-## Table of Contents
-- [The Premise](#premise)
-- [Reasearch Question](#question)
-- [Hypothesis](#hypothesis)
-- [Goals](#goals)
-- [Evaluation](#evaluation)
-- [Results](#results)
-
 ## The Premise
-
-
-## Research Question
-
+Currently, there is a disconnect between undergraduate students and the various student associations in Concordia. Usually, students must follow at least three different accounts across several social media websites just to keep up with the events they offer throughout the semester. 
+This poses a severe problem since students could miss out on events that might be crucial in developping their skills or social network. At the same time, a lack of participation might result in student associations losing funding from the university. 
+The objective we want to address and resolve with this project will be “How do we break the ineffective communication pattern that most student associations within the concordia community exhibit?”. 
 
 ## Hypothesis
-
+We believe by providing a digital university-wide notice board that student associations can use to advertise the activities they offer, we will be able to increase the engagement of students in extracurricular activities.
 
 ## Goals
-
+Our primary goal is to bridge the gap between student associations and their membership due to ineffective communication.<br>
+To do this:
++ the design needs to be simple and easy to navigate
++ the user must be able to know what each button and navigation element does within 5-10 seconds
++ the application must use clear fonts, coloring, and clear division of web page content, thus making it inclusive to a wider audience with different disabilities such as ADHD or dyslexia
++ for associations, the main function of adding an event must be easily accessed from the home page and quick to perform
 
 ## Evaluation
+Our original plan was to measure two metrics within 1 month after the app being deployed:
++ 75% of student associations should create at least 1 post about their upcoming events.
++ Posts should receive, on average, at least 45% likes with respect to the number of members, and at least 30% of members should create reminders for any upcoming event.
+
+Ultimately, given the fact that our website is still in the prototype stage and has not yet been deployed, we decided to evaluate the likelihood of it being adopted by members of the Concordia community using an anonymous survey conducted through Google Forms. The results of this survey can be found below.
 
 
 ## Results
-
 <p align="center" >
   <img src="CAMPBUZZ/resources/survey/survey_q1.png" alt="logo" width="600" height="300" /><br>
   Fig. 1 - Distribution of Participants' Roles
