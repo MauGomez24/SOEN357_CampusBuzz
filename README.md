@@ -20,10 +20,6 @@ _Your gateway to all campus events and activities_
 - [Evaluation](#evaluation)
 - [Results](#results)
 
-
-## Team Members
-
-
 ## The Premise
 
 
