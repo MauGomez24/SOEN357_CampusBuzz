@@ -4,14 +4,86 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Association Page</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Script for displaying the analytics charts -->
 </head>
 <body>
-    <header class="landing-header">
-        
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <h1><a href="campbuzz_landing.html" class="logo">CampusBuzz</a></h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#profile">My Profile</a></li>
+                <li><a href="campbuzz_landing.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Welcome Banner -->
+    <header class="welcome-banner">
+        <div class="container">
+            <h2>[Association]'s Creator Hub</h2>
+            <p>Create a new notice for an event or take a look at your analytics.</p>
+        </div>
     </header>
 
     <main>
+
+        <!--Create Post Button-->
+        <section id="create-post-button" class="container">
+            <button id="createPostButton" class="cta-button">Create New Post</button>
+        </section>
+
+        <!-- Analytics Section -->
+        <section id="analytics" class="analytics">
+            <div class="container">
+                <h2>Engagement Analytics</h2>
+                <div class="analytics-grid">
+                    <!-- Bar Chart -->
+                    <div class="chart-container">
+                        <h3>Event Views Over Time</h3>
+                        <canvas id="viewsChart"></canvas>
+                    </div>
+
+                    <!-- Pie Chart -->
+                    <div class="chart-container">
+                        <h3>RSVP Distribution</h3>
+                        <canvas id="rsvpChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Create Post Modal -->
+        <div class="overlay" id="modalOverlay"></div>
+        <div class="modal" id="createPostModal">
+            <section id="create-post" class="create-post">
+                <div class="container">
+                    <h2>Create New Event Post</h2>
+                    <form class="post-form">
+                        <label for="event-title">Event Title:</label>
+                        <input type="text" id="event-title" name="event-title" placeholder="Enter event title" required>
+
+                        <label for="event-date">Event Date:</label>
+                        <input type="date" id="event-date" name="event-date" required>
+
+                        <label for="event-time">Event Time:</label>
+                        <input type="time" id="event-time" name="event-time" required>
+
+                        <label for="event-location">Event Location:</label>
+                        <input type="text" id="event-location" name="event-location" placeholder="Enter event location" required>
+
+                        <label for="event-description">Event Description:</label>
+                        <textarea id="event-description" name="event-description" placeholder="Write a brief description of the event..." rows="5" required></textarea>
+
+                        <button type="submit" class="cta-button">Post Event</button>
+                    </form>
+                    <button id="closeCreatePostModal" class="close-button">Close</button>
+                </div>
+            </section>
+        </div>
     </main>
 
     <footer>
@@ -19,5 +91,6 @@
             <p>&copy; 2024 CampusBuzz. Built for Concordia University students.</p>
         </div>
     </footer>
+    <script src="assoc.js"></script>
 </body>
 </html>
