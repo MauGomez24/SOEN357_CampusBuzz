@@ -38,7 +38,7 @@ Ultimately, given the fact that our website is still in the prototype stage and 
 
 ## Results
 <p align="center" >
-  <img src="CAMPBUZZ/resources/survey/survey_q1.png" alt="logo" width="600" height="300" /><br>
+  <img src="resources/survey/survey_q1.png" alt="logo" width="600" height="300" /><br>
   Fig. 1 - Distribution of Participants' Roles
 </p>
 
