@@ -1,4 +1,3 @@
-//Bar Chart for views over time
 const viewsCnt = document.getElementById('viewsChart').getContext('2d');
 const viewsChart = new Chart(viewsCnt, {
     type: 'bar',
@@ -25,16 +24,15 @@ const viewsChart = new Chart(viewsCnt, {
     }
 });
 
-// Pie Chart: RSVP Distribution
 const rsvpCnt = document.getElementById('rsvpChart').getContext('2d');
 const rsvpChart = new Chart(rsvpCnt, {
     type: 'pie',
     data: {
-        labels: ['Hackathon', 'Networking Night', 'AI Workshop'], // Example event names
+        labels: ['Hackathon', 'Networking Night', 'AI Workshop'],
         datasets: [{
             label: 'RSVP Distribution',
-            data: [70, 50, 30], // Example data
-            backgroundColor: ['#800000', '#e6b853', '#ffcc66'], // Colors for each section
+            data: [70, 50, 30],
+            backgroundColor: ['#800000', '#e6b853', '#ffcc66'],
         }]
     },
     options: {
@@ -46,19 +44,16 @@ const rsvpChart = new Chart(rsvpCnt, {
 });
 
 
-// Handle "Create Post" modal display
 document.getElementById('createPostButton').addEventListener('click', function () {
     document.getElementById('modalOverlay').style.display = 'block';
     document.getElementById('createPostModal').style.display = 'block';
 });
 
-// Handle modal close
 document.getElementById('closeCreatePostModal').addEventListener('click', function () {
     document.getElementById('modalOverlay').style.display = 'none';
     document.getElementById('createPostModal').style.display = 'none';
 });
 
-// Close modal when clicking on overlay
 document.getElementById('modalOverlay').addEventListener('click', function () {
     document.getElementById('modalOverlay').style.display = 'none';
     document.getElementById('createPostModal').style.display = 'none';
