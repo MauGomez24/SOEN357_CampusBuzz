@@ -18,9 +18,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #800000; /* Burgundy */
+    background: #800000;
     color: #fff;
-    padding: 30px 20px; /* Reduced padding to decrease overall spacing */
+    padding: 30px 20px;
 }
 
 #landing-header {
@@ -31,22 +31,22 @@ body {
 
 .hero-content {
     max-width: 50%;
-    margin-right: 20px; /* Optional: Adjust spacing between text and image */
+    margin-right: 20px;
 }
 
 .hero-content h1 {
-    font-size: 2.5rem; /* Slightly reduce font size for a more compact layout */
+    font-size: 2.5rem;
     margin-bottom: 10px;
 }
 
 .hero-content p {
     font-size: 1.25rem;
-    margin-bottom: 15px; /* Reduced margin */
+    margin-bottom: 15px;
 }
 
 .hero-image img {
-    max-width: 50%; /* Ensure responsiveness */
-    height: auto; /* Maintain aspect ratio */
+    max-width: 50%;
+    height: auto;
     display: block;
 }
 
@@ -72,7 +72,7 @@ body {
 .modal {
     margin: auto;
     align-items: center;
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -85,7 +85,7 @@ body {
   }
   
   .overlay {
-    display: none; /* Hidden by default */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
@@ -108,9 +108,9 @@ body {
     font-weight: bold;
     cursor: pointer;
     transition: background 0.3s;
-    text-align: center; /* Ensures text is centered horizontally */
-    width: 150px; /* Sets a smaller width for the button */
-    margin-bottom: 15px; /* Adds space between the buttons */
+    text-align: center;
+    width: 150px;
+    margin-bottom: 15px;
   }
   
   .close-button {
