@@ -143,6 +143,18 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
 
+        #buzz {
+            text-decoration: none;
+            color: #fff
+        }
+
+        #logo-name {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            gap: 10px;
+        }
+
         @media (max-width: 768px) {
             body {
                 padding: 1rem;
@@ -161,9 +173,13 @@
 <body>
     <nav class="navbar">
         <div class="container">
-            <div class="logo">
-                <a href="index.html"><img src="./resources/logo.png" alt="CampusBuzz Logo" class="logo-img"></a>
-                <a href="index.html" class=""><h1>CampusBuzz</h1></a>
+            <div id="logo-name">
+                <div class="logo">
+                    <a href="index.html"><img src="./resources/logo.png" alt="CampusBuzz Logo" class="logo-img" width="150" height="150"></a>
+                </div>
+                <div id="buzz-name">
+                    <a href="index.html" id="buzz"><h1>CampusBuzz</h1></a>
+                </div>
             </div>
             <ul class="nav-links">
                 <li><a href="Calendar.html">Calendar</a></li>
