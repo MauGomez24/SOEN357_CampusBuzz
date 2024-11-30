@@ -250,30 +250,26 @@
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Get event ID from URL parameters
     const urlParams = new URLSearchParams(window.location.search);
     const eventId = urlParams.get('id');
 
-    // Get elements
     const eventTitle = document.getElementById('eventTitle');
     const eventDate = document.getElementById('eventDate');
     const eventDetails = document.getElementById('eventDetails');
     const eventGallery = document.getElementById('eventGallery');
     const galleryGrid = eventGallery.querySelector('.gallery-grid');
 
-    // If event exists, display its details
     if (eventId && eventDatabase[eventId]) {
         const event = eventDatabase[eventId];
         eventTitle.textContent = event.title;
         eventDate.textContent = event.date;
         eventDetails.innerHTML = `<p>${event.details}</p>`;
 
-        // Populate gallery
         if (event.images && event.images.length > 0) {
-            galleryGrid.innerHTML = ''; // Clear default message
+            galleryGrid.innerHTML = '';
             event.images.forEach(image => {
                 const imgElement = document.createElement('img');
-                imgElement.src = image; // Use actual image path
+                imgElement.src = image;
                 imgElement.alt = `${event.title} photo`;
                 galleryGrid.appendChild(imgElement);
             });
@@ -284,7 +280,7 @@ document.addEventListener('DOMContentLoaded', () => {
         eventTitle.textContent = 'Event Not Found';
         eventDate.textContent = '';
         eventDetails.innerHTML = '<p>Sorry, the requested event could not be found.</p>';
-        eventGallery.style.display = 'none'; // Hide gallery if event not found
+        eventGallery.style.display = 'none'; 
     }
 });
 
