@@ -37,8 +37,8 @@ body {
 }
 
 .navbar .logo {
-display: flex; /* Aligns items horizontally */
-align-items: center; /* Vertically centers items */
+display: flex;
+align-items: center;
 color: #fff;
 text-decoration: none;
 font-size: 1rem;
@@ -48,14 +48,14 @@ transition: background 0.3s;
 }
 
 .logo-img {
-width: 40px; /* Adjust the size as needed */
-height: 40px; /* Ensure it maintains aspect ratio */
-margin-right: 10px; /* Adds spacing between the image and the text */
+width: 40px;
+height: 40px;
+margin-right: 10px;
 }
 
 .navbar .logo h1 {
     font-size: 1.5rem;
-    margin: 0; /* Remove default margin for proper alignment */
+    margin: 0;
 }
 .logo a {
     color: #fff;
