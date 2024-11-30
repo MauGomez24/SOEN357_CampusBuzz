@@ -37,10 +37,33 @@
             color: #fff;
             padding: 30px 0;
         }
+        .navbar .logo {
+        display: flex; /* Aligns items horizontally */
+        align-items: center; /* Vertically centers items */
+        color: #fff;
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 5px 10px;
+        border-radius: 5px;
+        transition: background 0.3s;
+        }
+
+        .logo-img {
+        width: 40px; /* Adjust the size as needed */
+        height: 40px; /* Ensure it maintains aspect ratio */
+        margin-right: 10px; /* Adds spacing between the image and the text */
+        }
 
         .navbar .logo h1 {
             font-size: 1.5rem;
-            display: inline;
+            margin: 0; /* Remove default margin for proper alignment */
+        }
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
         }
 
         .nav-links {
@@ -187,13 +210,14 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <h1>CampusBuzz</h1>
+                <a href="campbuzz_landing.html"><img src="./resources/logo.png" alt="CampusBuzz Logo" class="logo-img"></a>
+                <a href="campbuzz_landing.html" class=""><h1>CampusBuzz</h1></a>
             </div>
             <ul class="nav-links">
                 <li><a href="Calendar.html">Calendar</a></li>
                 <li><a href="campbuzz_home.html">Events</a></li>
-                <li><a href="#profile">My Profile</a></li>
-                <li><a href="#logout" class="logout">Logout</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="campbuzz_landing.html" class="logout">Logout</a></li>
             </ul>
         </div>
     </nav>
@@ -229,7 +253,7 @@
             '2024-11-15': [
                 { id: 4, title: 'ConUhacks Competition', url: 'event.html?id=4' }
             ],
-            '2024-11-25': [
+            '2024-12-02': [
                 { id: 5, title: 'CompanyX Plant Tour', url: 'event.html?id=5' },
                 { id: 6, title: 'ASP Certification', url: 'event.html?id=6' }
             ]

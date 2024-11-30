@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - CampBuzz</title>
+    <style>
+        :root {
+            --burgundy: #800000;
+            --honey: #e6b853;
+            --white: #ffffff;
+            --light-gray: #f0f0f0;
+            --dark-gray: #333333;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        .container {
+            background-color: var(--white);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 2rem;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            margin-top: 5%;
+        }
+
+        /* Navbar */
+        .container-nav {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            color: #fff;
+        }
+        .navbar {
+            background: #800000; 
+            color: #fff;
+            padding: 30px 0;
+        }
+
+        .navbar .logo {
+            display: flex; 
+            align-items: center;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .logo-img {
+            width: 40px; 
+            height: 40px; 
+            margin-right: 10px;
+        }
+
+        .navbar .logo h1 {
+            font-size: 1.5rem;
+            margin: 0;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            float: right;
+            margin: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+        .logo a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #e6b853;
+        }
+
+        .logout {
+            background: #ff4d4d;
+            color: #fff;
+        }
+
+        .logout:hover {
+            background: #cc0000;
+        }
+
+        h1 {
+            color: #fff;;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--dark-gray);
+        }
+
+        input, select, textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid var(--burgundy);
+            border-radius: 4px;
+            font-size: 1rem;
+        }
+
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--honey);
+            box-shadow: 0 0 0 2px rgba(230, 184, 83, 0.2);
+        }
+
+        textarea {
+            min-height: 150px;
+            resize: vertical;
+        }
+
+        .btn {
+            background-color: var(--burgundy);
+            color: var(--white);
+            border: none;
+            border-radius: 4px;
+            padding: 0.75rem;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            width: 100%;
+        }
+
+        .btn:hover {
+            background-color: #600000;
+        }
+
+        .error {
+            color: var(--burgundy);
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container-nav">
+            <div class="logo">
+                <a href="campbuzz_landing.html"><img src="./resources/logo.png" alt="CampusBuzz Logo" class="logo-img"></a>
+                <a href="campbuzz_landing.html" class=""><h1>CampusBuzz</h1></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Calendar.html">Calendar</a></li>
+                <li><a href="campbuzz_home.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="campbuzz_landing.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container">
+        <h1 style="color: #800000;">Contact Us</h1>
+        <form id="contactForm">
+            <div class="form-group">
+                <label for="topic">Topic</label>
+                <select id="topic" name="topic" required>
+                    <option value="">Select a topic</option>
+                    <option value="general">General Inquiry</option>
+                    <option value="event">Event Information</option>
+                    <option value="technical">Technical Support</option>
+                    <option value="feedback">Feedback</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const contactForm = document.getElementById('contactForm');
+
+            contactForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                if (validateForm()) {
+                    // Here you would typically send the form data to your server
+                    alert('Message sent successfully!');
+                    contactForm.reset();
+                }
+            });
+
+            function validateForm() {
+                const topic = document.getElementById('topic');
+                const subject = document.getElementById('subject');
+                const message = document.getElementById('message');
+                let isValid = true;
+
+                if (topic.value === '') {
+                    showError(topic, 'Please select a topic');
+                    isValid = false;
+                } else {
+                    clearError(topic);
+                }
+
+                if (subject.value.trim() === '') {
+                    showError(subject, 'Subject is required');
+                    isValid = false;
+                } else {
+                    clearError(subject);
+                }
+
+                if (message.value.trim() === '') {
+                    showError(message, 'Message is required');
+                    isValid = false;
+                } else {
+                    clearError(message);
+                }
+
+                return isValid;
+            }
+
+            function showError(input, message) {
+                const formGroup = input.parentElement;
+                const error = formGroup.querySelector('.error') || document.createElement('div');
+                error.className = 'error';
+                error.textContent = message;
+                if (!formGroup.querySelector('.error')) {
+                    formGroup.appendChild(error);
+                }
+            }
+
+            function clearError(input) {
+                const formGroup = input.parentElement;
+                const error = formGroup.querySelector('.error');
+                if (error) {
+                    formGroup.removeChild(error);
+                }
+            }
+        });
+    </script>
+</body>
+</html>
+

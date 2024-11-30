@@ -6,8 +6,16 @@ document.addEventListener('DOMContentLoaded', () => {
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
             if (validateLoginForm()) {
-                // Here you would typically send the form data to your server
-                alert('Login successful!');
+                const email = document.getElementById('loginEmail').value;
+                const password = document.getElementById('loginPassword').value;
+                
+                if (email === 'Association@concordia.ca' && password === 'Association') {
+                    window.location.href = 'campbuzz_assoc_prof.html';
+                } else if (email === 'Student@concordia.ca' && password === 'Students') {
+                    window.location.href = 'campbuzz_home.html';
+                } else {
+                    alert('Invalid credentials. Please try again.');
+                }
             }
         });
     }

@@ -36,9 +36,33 @@ body {
     padding: 30px 0;
 }
 
+.navbar .logo {
+display: flex; /* Aligns items horizontally */
+align-items: center; /* Vertically centers items */
+color: #fff;
+text-decoration: none;
+font-size: 1rem;
+padding: 5px 10px;
+border-radius: 5px;
+transition: background 0.3s;
+}
+
+.logo-img {
+width: 40px; /* Adjust the size as needed */
+height: 40px; /* Ensure it maintains aspect ratio */
+margin-right: 10px; /* Adds spacing between the image and the text */
+}
+
 .navbar .logo h1 {
     font-size: 1.5rem;
-    display: inline;
+    margin: 0; /* Remove default margin for proper alignment */
+}
+.logo a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1rem;
+    border-radius: 5px;
+    transition: background 0.3s;
 }
 
 .nav-links {
@@ -96,6 +120,12 @@ body {
 h2 {
     color: var(--burgundy);
     margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+h3 {
+    color: var(--burgundy);
+    margin-top: 1.5rem;
     text-align: center;
 }
 
