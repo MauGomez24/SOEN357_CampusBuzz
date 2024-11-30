@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', () => {
         registerForm.addEventListener('submit', (e) => {
             e.preventDefault();
             if (validateRegisterForm()) {
-                // Here you would typically send the form data to your server
                 alert('Registration successful!');
             }
         });
