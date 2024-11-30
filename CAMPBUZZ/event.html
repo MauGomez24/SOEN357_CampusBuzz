@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Details</title>
+    <style>
+        :root {
+            --primary: #800000;
+            --primary-light: #a33;
+            --white: #fffdd0;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        /* Navbar */
+        .navbar {
+            background: #800000; /* Burgundy */
+            color: #fff;
+            padding: 30px 0;
+        }
+
+        .navbar .logo h1 {
+            font-size: 1.5rem;
+            display: inline;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            float: right;
+            margin: 0;
+        }
+
+        .nav-links li {
+            display: inline;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-size: 1rem;
+            padding: 5px 10px;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .nav-links a:hover {
+            background: #e6b853;
+        }
+
+        .logout {
+            background: #ff4d4d;
+            color: #fff;
+        }
+
+        .logout:hover {
+            background: #cc0000;
+        }
+        .event-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+            margin-top: 2rem; 
+        }
+
+        .event-header {
+            border-bottom: 2px solid var(--primary);
+            padding-bottom: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .event-title {
+            color: var(--primary);
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .event-date {
+            color: #666;
+            font-size: 1.1rem;
+        }
+
+        .event-details {
+            margin-bottom: 2rem;
+        }
+
+        .back-button {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary);
+            color: var(--white);
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: var(--primary-light);
+        }
+        /* EVENT GALLERY CSS */
+        .event-gallery {
+            margin-top: 2rem;
+        }
+
+        .event-gallery h2 {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 1rem;
+            }
+
+            .event-container {
+                padding: 1rem;
+            }
+
+            .event-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="campbuzz_landing.html"><img src="./resources/logo.png" alt="CampusBuzz Logo" class="logo-img"></a>
+                <a href="campbuzz_landing.html" class=""><h1>CampusBuzz</h1></a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="Calendar.html">Calendar</a></li>
+                <li><a href="campbuzz_home.html">Events</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+                <li><a href="campbuzz_landing.html" class="logout">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="event-container">
+        <div class="event-gallery" id="eventGallery">
+            <h2>Event Photos</h2>
+            <div class="gallery-grid">
+                <p>Loading event photos...</p>
+            </div>
+        </div>
+        <div class="event-header">
+            <h1 class="event-title" id="eventTitle">Event Title</h1>
+            <p class="event-date" id="eventDate">Event Date</p>
+        </div>
+        <div class="event-details" id="eventDetails">
+            <p>Loading event details...</p>
+        </div>
+        <a href="Calendar.html" class="back-button">Back to Calendar</a>
+    </div>
+
+    <script>
+        // Sample event data (in a real application, this would come from a server)
+        const eventDatabase = {
+    '1': {
+        title: 'Soldering Workshop',
+        date: 'November 5, 2024',
+        details: 'Daily standup meeting with the development team to discuss progress and blockers.',
+        images: [
+            './resources/Soldering1.jpg',
+            './resources/Soldering2.jpg',
+            './resources/Soldering3.jpg'
+        ]
+    },
+    '2': {
+        title: 'Halloween Party',
+        date: 'November 5, 2024',
+        details: 'Team lunch at the local restaurant to celebrate project milestone.'
+    },
+    '3': {
+        title: 'Englympics Competition',
+        date: 'November 10, 2024',
+        details: 'Final submission deadline for the Q1 project deliverables.'
+    },
+    '4': {
+        title: 'ConUhacks Competition',
+        date: 'November 15, 2024',
+        details: 'Present the new features and project progress to the client stakeholders.'
+    },
+    '5': {
+        title: 'CompanyX Plant Tour',
+        date: 'November 22, 2024',
+        details: 'Outdoor team building activity and games.'
+    },
+    '6': {
+        title: 'ASP Certification',
+        date: 'November 22, 2024',
+        details: 'Technical training session on new development tools and methodologies.'
+    }
+};
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Get event ID from URL parameters
+    const urlParams = new URLSearchParams(window.location.search);
+    const eventId = urlParams.get('id');
+
+    // Get elements
+    const eventTitle = document.getElementById('eventTitle');
+    const eventDate = document.getElementById('eventDate');
+    const eventDetails = document.getElementById('eventDetails');
+    const eventGallery = document.getElementById('eventGallery');
+    const galleryGrid = eventGallery.querySelector('.gallery-grid');
+
+    // If event exists, display its details
+    if (eventId && eventDatabase[eventId]) {
+        const event = eventDatabase[eventId];
+        eventTitle.textContent = event.title;
+        eventDate.textContent = event.date;
+        eventDetails.innerHTML = `<p>${event.details}</p>`;
+
+        // Populate gallery
+        if (event.images && event.images.length > 0) {
+            galleryGrid.innerHTML = ''; // Clear default message
+            event.images.forEach(image => {
+                const imgElement = document.createElement('img');
+                imgElement.src = image; // Use actual image path
+                imgElement.alt = `${event.title} photo`;
+                galleryGrid.appendChild(imgElement);
+            });
+        } else {
+            galleryGrid.innerHTML = '<p>No photos available for this event.</p>';
+        }
+    } else {
+        eventTitle.textContent = 'Event Not Found';
+        eventDate.textContent = '';
+        eventDetails.innerHTML = '<p>Sorry, the requested event could not be found.</p>';
+        eventGallery.style.display = 'none'; // Hide gallery if event not found
+    }
+});
+
+    </script>
+</body>
+</html>
