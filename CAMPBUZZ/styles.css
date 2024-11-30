@@ -9,7 +9,7 @@ body {
 
 .container {
     width: 90%;
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -20,21 +20,34 @@ body {
     justify-content: space-between;
     background: #800000; /* Burgundy */
     color: #fff;
-    padding: 50px 20px;
+    padding: 30px 20px; /* Reduced padding to decrease overall spacing */
+}
+
+#landing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .hero-content {
     max-width: 50%;
+    margin-right: 20px; /* Optional: Adjust spacing between text and image */
 }
 
 .hero-content h1 {
-    font-size: 3rem;
+    font-size: 2.5rem; /* Slightly reduce font size for a more compact layout */
     margin-bottom: 10px;
 }
 
 .hero-content p {
     font-size: 1.25rem;
-    margin-bottom: 20px;
+    margin-bottom: 15px; /* Reduced margin */
+}
+
+.hero-image img {
+    max-width: 50%; /* Ensure responsiveness */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
 }
 
 .cta-button {
@@ -117,7 +130,6 @@ body {
     width: 100%;
     max-width: 400px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Section Styles */
